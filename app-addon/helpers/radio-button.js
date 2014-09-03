@@ -1,7 +1,4 @@
 import Ember from 'ember';
+import RadioView from '../views/radio-button';
 
-export default Ember.Handlebars.makeBoundHelper(function(options) {
-  Ember.assert('You can only pass attributes to the `radio-button` helper, not arguments', arguments.length < 2);
-
-  return Ember.Handlebars.helpers.view.call(this, 'view.RadioButton', options);
-});
+export default Ember.Handlebars.makeViewHelper(RadioView);

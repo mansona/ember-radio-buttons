@@ -6,6 +6,9 @@ This repo is just using the work of [FellowMD](https://gist.github.com/FellowMD)
 
 
 ## Install
+
+**This package assumes that you are using [ember-cli](http://ember-cli.com)**
+
 To install, run
 
 ```

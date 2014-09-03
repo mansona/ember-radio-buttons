@@ -14,6 +14,15 @@ npm install ember-radio-buttons --save-dev
 
 and that's it!
 
+## Usage
+This ember-addon exposes a {{radio-button}} handlebars helper that gives you a working implementation of Radio Buttons
+
+```hbs
+{{radio-button value='one' checked=selectedNumber}}
+{{radio-button value='two' checked=selectedNumber}}
+```
+for this example it will call ```this.set('selectedNumber', value)``` depending on which of the radio buttons you click.
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT) © Chris Manson @ [Blooie](http://bloo.ie) 2014

@@ -11,5 +11,11 @@ export default Ember.View.extend({
 
     change: function() {
         this.set('checked', this.get('value'));
-    }
+    },
+
+    _updateElementValue: function() {
+        Ember.run.next(this, function() {
+          this.$().prop('checked', this.get('htmlChecked'));
+        });
+    }.observes('htmlChecked')
 });

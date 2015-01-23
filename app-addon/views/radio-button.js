@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.View.extend({
     tagName: 'input',
     type: 'radio',
-    attributeBindings: ['type', 'htmlChecked:checked', 'value', 'name'],
+    attributeBindings: ['type', 'htmlChecked:checked', 'value', 'name', 'disabled'],
 
     htmlChecked: function() {
         return this.get('value') === this.get('checked');

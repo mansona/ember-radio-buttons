@@ -25,6 +25,7 @@ This ember-addon exposes a {{radio-button}} component that gives you a working i
 ```
 for this example it will call ```this.set('selectedNumber', value)``` depending on which of the radio buttons you click.
 
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT) © Chris Manson @ [Blooie](http://bloo.ie) 2015

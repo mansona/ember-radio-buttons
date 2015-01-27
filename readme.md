@@ -1,5 +1,7 @@
 # Radio buttons for Ember
 
+[![Build Status](https://travis-ci.org/Blooie/ember-radio-buttons.svg?branch=master)](https://travis-ci.org/Blooie/ember-radio-buttons)
+
 > This addon gives you radio buttons and button groups for EmberJS
 
 This repo is just using the work of [FellowMD](https://gist.github.com/FellowMD) and packaging up his [implementation of radio button helpers](https://gist.github.com/FellowMD/7973c9bec27f0e0a3508). Further discussion on this issue can be found [here](https://github.com/emberjs/ember.js/pull/4352)

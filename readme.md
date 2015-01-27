@@ -4,7 +4,6 @@
 
 This repo is just using the work of [FellowMD](https://gist.github.com/FellowMD) and packaging up his [implementation of radio button helpers](https://gist.github.com/FellowMD/7973c9bec27f0e0a3508). Further discussion on this issue can be found [here](https://github.com/emberjs/ember.js/pull/4352)
 
-
 ## Install
 
 **This package assumes that you are using [ember-cli](http://ember-cli.com)**
@@ -12,13 +11,13 @@ This repo is just using the work of [FellowMD](https://gist.github.com/FellowMD)
 To install, run
 
 ```
-npm install ember-radio-buttons --save-dev
+npm install ember-radio-buttons --save
 ```
 
 and that's it!
 
 ## Usage
-This ember-addon exposes a {{radio-button}} handlebars helper that gives you a working implementation of Radio Buttons
+This ember-addon exposes a {{radio-button}} component that gives you a working implementation of Radio Buttons
 
 ```hbs
 {{radio-button value='one' checked=selectedNumber}}
@@ -28,4 +27,30 @@ for this example it will call ```this.set('selectedNumber', value)``` depending 
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT) © Chris Manson @ [Blooie](http://bloo.ie) 2014
+[MIT](http://opensource.org/licenses/MIT) © Chris Manson @ [Blooie](http://bloo.ie) 2015
+
+
+# Collaborating
+This README outlines the details of collaborating on this Ember addon.
+
+## Installation
+
+* `git clone` this repository
+* `npm install`
+* `bower install`
+
+## Running
+
+* `ember server`
+* Visit your app at http://localhost:4200.
+
+## Running Tests
+
+* `ember test`
+* `ember test --server`
+
+## Building
+
+* `ember build`
+
+For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).

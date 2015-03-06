@@ -35,6 +35,12 @@ This will exposes a {{radio-button}} component that gives you a working implemen
 ```
 for this example it will call ```this.set('selectedNumber', value)``` depending on which of the radio buttons you click.
 
+To trigger action on change
+
+```hbs
+{{radio-button value='one' changed='changeValue'}}
+```
+`changed` - Takes the following signature `function (value) {}`
 
 ## License
 

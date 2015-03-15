@@ -38,9 +38,9 @@ for this example it will call ```this.set('selectedNumber', value)``` depending 
 To trigger action on change
 
 ```hbs
-{{radio-button value='one' changed='changeValue'}}
+{{radio-button value='one' changed=actionToBeCalled}}
 ```
-`changed` - Takes the following signature `function (value) {}`
+`actionToBeCalled` - Takes the following signature `function (value) {}`
 
 ## License
 

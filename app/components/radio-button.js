@@ -1,0 +1,1 @@
+export { default } from 'ember-radio-buttons/components/radio-button';

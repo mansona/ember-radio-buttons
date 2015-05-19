@@ -19,15 +19,10 @@ npm install ember-radio-buttons --save
 and that's it!
 
 ## Usage
-To use this addon you need to expose the component in your app. Add this file to your components directory:
-```js
-// app/components/radio-button.js
-import EmberRadioButton from 'ember-radio-buttons';
 
-export default EmberRadioButton;
-```
+In previous versions of this addon you needed to expose the component in your app, this is no longer the case as of v4.0.0. If you have a file `app/components/radio-button.js` in your own app that just exports `ember-radio-buttons` it is no longer necessary but it won't break anything.
 
-This will exposes a {{radio-button}} component that gives you a working implementation of Radio Buttons.
+After installing this addon you will have a {{radio-button}} component that gives you a working implementation of Radio Buttons.
 
 ```hbs
 {{radio-button value='one' checked=selectedNumber}}

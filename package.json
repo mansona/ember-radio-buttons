@@ -1,6 +1,6 @@
 {
   "name": "ember-radio-buttons",
-  "version": "3.1.0",
+  "version": "4.0.0",
   "description": "Implementation of radio buttons for ember that works with ember-cli",
   "directories": {
     "doc": "doc",

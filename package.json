@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Blooie/ember-radio-buttons"
+    "url": "https://github.com/stonecircle/ember-radio-buttons"
   },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "Chris Manson <chris@bloo.ie>",
+  "author": "Chris Manson <chris@stonecircle.io>",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",
@@ -53,7 +53,7 @@
     "configPath": "tests/dummy/config"
   },
   "bugs": {
-    "url": "https://github.com/Blooie/ember-radio-buttons/issues"
+    "url": "https://github.com/stonecircle/ember-radio-buttons/issues"
   },
-  "homepage": "https://github.com/Blooie/ember-radio-buttons"
+  "homepage": "https://github.com/stonecircle/ember-radio-buttons"
 }

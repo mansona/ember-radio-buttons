@@ -1,6 +1,6 @@
 # Radio buttons for Ember
 
-[![Build Status](https://travis-ci.org/Blooie/ember-radio-buttons.svg?branch=master)](https://travis-ci.org/Blooie/ember-radio-buttons)
+[![Build Status](https://travis-ci.org/stonecircle/ember-radio-buttons.svg?branch=master)](https://travis-ci.org/stonecircle/ember-radio-buttons)
 
 > This addon gives you radio buttons and button groups for EmberJS
 
@@ -33,7 +33,7 @@ for this example it will call ```this.set('selectedNumber', value)``` depending 
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT) © Chris Manson @ [Blooie](http://bloo.ie) 2015
+[MIT](http://opensource.org/licenses/MIT) © Chris Manson @ [Stone Circle Design LTD](http://stonecircle.io) 2016
 
 
 # Collaborating

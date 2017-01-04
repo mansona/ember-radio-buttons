@@ -30,6 +30,12 @@ After installing this addon you will have a {{radio-button}} component that give
 ```
 for this example it will call ```this.set('selectedNumber', value)``` depending on which of the radio buttons you click.
 
+To trigger action on change
+
+```hbs
+{{radio-button value='one' changed=actionToBeCalled}}
+```
+`actionToBeCalled` - Takes the following signature `function (value) {}`
 
 ## License
 

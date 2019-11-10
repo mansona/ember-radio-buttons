@@ -1,4 +1,7 @@
-# Radio buttons for Ember
+ember-radio-buttons
+==============================================================================
+
+Radio buttons for Ember
 
 [![Build Status](https://travis-ci.org/stonecircle/ember-radio-buttons.svg?branch=master)](https://travis-ci.org/stonecircle/ember-radio-buttons)
 
@@ -6,19 +9,25 @@
 
 This repo is just using the work of [FellowMD](https://gist.github.com/FellowMD) and packaging up his [implementation of radio button helpers](https://gist.github.com/FellowMD/7973c9bec27f0e0a3508). Further discussion on this issue can be found [here](https://github.com/emberjs/ember.js/pull/4352)
 
-## Install
 
-**This package assumes that you are using [ember-cli](http://ember-cli.com)**
+Compatibility
+------------------------------------------------------------------------------
 
-To install, run
+* Ember.js v3.4 or above
+* Ember CLI v2.13 or above
+* Node.js v8 or above
+
+
+Installation
+------------------------------------------------------------------------------
 
 ```
-npm install ember-radio-buttons --save
+ember install ember-radio-buttons
 ```
 
-and that's it!
 
-## Usage
+Usage
+------------------------------------------------------------------------------
 
 In previous versions of this addon you needed to expose the component in your app, this is no longer the case as of v4.0.0. If you have a file `app/components/radio-button.js` in your own app that just exports `ember-radio-buttons` it is no longer necessary but it won't break anything.
 
@@ -31,32 +40,13 @@ After installing this addon you will have a {{radio-button}} component that give
 for this example it will call ```this.set('selectedNumber', value)``` depending on which of the radio buttons you click.
 
 
-## License
+Contributing
+------------------------------------------------------------------------------
 
-[MIT](http://opensource.org/licenses/MIT) © Chris Manson @ [Stone Circle Design LTD](http://stonecircle.io) 2016
+See the [Contributing](CONTRIBUTING.md) guide for details.
 
 
-# Collaborating
-This README outlines the details of collaborating on this Ember addon.
+License
+------------------------------------------------------------------------------
 
-## Installation
-
-* `git clone` this repository
-* `npm install`
-* `bower install`
-
-## Running
-
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+This project is licensed under the [MIT License](LICENSE.md).

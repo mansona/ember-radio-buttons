@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 
-import { render } from '@ember/test-helpers';
+import { render, click } from '@ember/test-helpers';
 
 import hbs from 'htmlbars-inline-precompile';
 
@@ -15,7 +15,7 @@ module('RadioButtonComponent', function(hooks) {
       {{radio-button}}
     `);
 
-    assert.equal(this.$('input[type=radio]').length, 1);
+    assert.dom('input[type=radio]').exists();
   });
 
   test('it updates', async function(assert) {
@@ -27,22 +27,22 @@ module('RadioButtonComponent', function(hooks) {
       {{radio-button id="green" name="color" value="green" checked=color}}
     `);
 
-    assert.equal(this.$('input:checked').length, 0, 'none checked');
+    assert.dom('input:checked').doesNotExist();
 
     this.set('color', 'red');
 
-    assert.equal(this.$('input:checked').length, 1, 'one checked');
-    assert.ok(this.$('#red').is(':checked'), 'red is checked');
+    assert.dom('input:checked').exists();
+    assert.dom('#red').isChecked();
 
     this.set('color', 'blue');
 
-    assert.equal(this.$('input:checked').length, 1, 'one checked');
-    assert.ok(this.$('#blue').is(':checked'), 'blue is checked');
+    assert.dom('input:checked').exists()
+    assert.dom('#blue').isChecked();
 
-    this.$('#green').click();
+    await click('#green');
 
-    assert.equal(this.$('input:checked').length, 1, 'one checked');
-    assert.ok(this.$('#green').is(':checked'), 'green is checked');
-    assert.equal(this.get('color'), 'green', 'property updates');
+    assert.dom('input:checked').exists();
+    assert.dom('#green').isChecked();
+    assert.equal(this.get('color'), 'green');
   });
 });

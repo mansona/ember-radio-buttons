@@ -19,8 +19,8 @@ export default Component.extend({
   },
 
   _setCheckedProp: function() {
-    if (!this.$()) { return; }
-    this.$().prop('checked', this.get('htmlChecked'));
+    if (!this.element) { return; }
+    this.element.checked = this.get('htmlChecked')
   },
 
   _updateElementValue: observer('htmlChecked', function() {

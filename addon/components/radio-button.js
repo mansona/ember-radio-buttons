@@ -1,5 +1,4 @@
-import { once } from '@ember/runloop';
-import { computed, observer } from '@ember/object';
+import { computed } from '@ember/object';
 import Component from '@ember/component';
 
 export default Component.extend({
@@ -16,14 +15,8 @@ export default Component.extend({
 
   change: function() {
     this.set('checked', this.get('value'));
+    if (this.element) {
+      this.element.checked = this.get('htmlChecked')
+    }
   },
-
-  _setCheckedProp: function() {
-    if (!this.element) { return; }
-    this.element.checked = this.get('htmlChecked')
-  },
-
-  _updateElementValue: observer('htmlChecked', function() {
-    once(this, '_setCheckedProp');
-  })
 });

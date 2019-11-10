@@ -1,6 +1,7 @@
-import Ember from 'ember';
+import { computed } from '@ember/object';
+import Component from '@ember/component';
 
-export default Ember.Component.extend({
+export default Component.extend({
   tagName: 'input',
   type: 'radio',
   attributeBindings: ['type', 'htmlChecked:checked', 'value', 'name', 'disabled'],
@@ -8,20 +9,14 @@ export default Ember.Component.extend({
   value: null,
   checked: null,
 
-  htmlChecked: Ember.computed('value', 'checked', function() {
+  htmlChecked: computed('value', 'checked', function() {
     return this.get('value') === this.get('checked');
   }),
 
   change: function() {
     this.set('checked', this.get('value'));
+    if (this.element) {
+      this.element.checked = this.get('htmlChecked')
+    }
   },
-
-  _setCheckedProp: function() {
-    if (!this.$()) { return; }
-    this.$().prop('checked', this.get('htmlChecked'));
-  },
-
-  _updateElementValue: Ember.observer('htmlChecked', function() {
-    Ember.run.once(this, '_setCheckedProp');
-  })
 });

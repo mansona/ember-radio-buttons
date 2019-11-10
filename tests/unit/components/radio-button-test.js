@@ -1,48 +1,48 @@
-import {
-  moduleForComponent,
-  test
-} from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+
+import { render, click } from '@ember/test-helpers';
 
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('radio-button', 'RadioButtonComponent', {
-  integration: true
-});
+module('RadioButtonComponent', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('it renders', function(assert) {
-  assert.expect(1);
+  test('it renders', async function(assert) {
+    assert.expect(1);
 
-  this.render(hbs`
-    {{radio-button}}
-  `);
+    await render(hbs`
+      {{radio-button}}
+    `);
 
-  assert.equal(this.$('input[type=radio]').length, 1);
-});
+    assert.dom('input[type=radio]').exists();
+  });
 
-test('it updates', function(assert) {
-  assert.expect(8);
+  test('it updates', async function(assert) {
+    assert.expect(8);
 
-  this.render(hbs`
-    {{radio-button id="red" name="color" value="red" checked=color}}
-    {{radio-button id="blue" name="color" value="blue" checked=color}}
-    {{radio-button id="green" name="color" value="green" checked=color}}
-  `);
+    await render(hbs`
+      {{radio-button id="red" name="color" value="red" checked=color}}
+      {{radio-button id="blue" name="color" value="blue" checked=color}}
+      {{radio-button id="green" name="color" value="green" checked=color}}
+    `);
 
-  assert.equal(this.$('input:checked').length, 0, 'none checked');
+    assert.dom('input:checked').doesNotExist();
 
-  this.set('color', 'red');
+    this.set('color', 'red');
 
-  assert.equal(this.$('input:checked').length, 1, 'one checked');
-  assert.ok(this.$('#red').is(':checked'), 'red is checked');
+    assert.dom('input:checked').exists();
+    assert.dom('#red').isChecked();
 
-  this.set('color', 'blue');
+    this.set('color', 'blue');
 
-  assert.equal(this.$('input:checked').length, 1, 'one checked');
-  assert.ok(this.$('#blue').is(':checked'), 'blue is checked');
+    assert.dom('input:checked').exists()
+    assert.dom('#blue').isChecked();
 
-  this.$('#green').click();
+    await click('#green');
 
-  assert.equal(this.$('input:checked').length, 1, 'one checked');
-  assert.ok(this.$('#green').is(':checked'), 'green is checked');
-  assert.equal(this.get('color'), 'green', 'property updates');
+    assert.dom('input:checked').exists();
+    assert.dom('#green').isChecked();
+    assert.equal(this.get('color'), 'green');
+  });
 });
